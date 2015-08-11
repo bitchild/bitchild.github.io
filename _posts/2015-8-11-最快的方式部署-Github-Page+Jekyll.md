@@ -21,7 +21,7 @@ title: 最快的方式部署-Github-Page+Jekyll
 
 关于 Jekyll，我们并不需要关心它是个什么鬼，有些博客上说的自己要在仓库下建立文件，编辑配置啥的，都是不必要的，更不需要去搞什么本地搭建（误人子弟）。你需要专注你的目的：建立一个好看的个人博客。
 
-所以，现在去这个网站[jekyllthemes.org/](http://jekyllthemes.org/)，选一个你中意的模版，然后点进去，可以先看看 Demo。比如这个：
+所以，现在去这个网站[jekyllthemes.org](http://jekyllthemes.org/)，选一个你中意的模版，然后点进去，可以先看看 Demo。比如这个：
 ![](http://d.pcs.baidu.com/thumbnail/cf46c147815497607bb36cb26a44a6b2?fid=1110863153-250528-373063245737809&time=1439298000&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-N40IoT92YVXnfYxtFWzT5QJlXoI%3D&rt=sh&expires=2h&r=903522185&sharesign=unknown&size=c710_u500&quality=100)
 
 假如你现在看上这个了，看上了就要下手，Download It（这就是网络世界表达爱的方式）。
