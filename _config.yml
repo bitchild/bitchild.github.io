@@ -1,11 +1,11 @@
 # Site settings
-title: Emerald | A simple Jekyll blog
+title: BitChild | A Magic Existing
 description: "A minimal blog template, build with Jekyll."
-url: "http://www.jacoporabolini.com/emerald"
+url: "cuckoo.daoapp.io"
 author:
-  name: "Jacopo Rabolini"
-  email: "hello@jacoporabolini.com"
-  url: "http://www.jacoporabolini.com"
+  name: "Louis Wei"
+  email: "yp_liuwei@live.com"
+  url: "http://twobitsboy.top"
 
 # Build settings
 baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
@@ -13,7 +13,7 @@ markdown: kramdown
 source: .
 destination: ./_site
 permalink: /:title
-paginate: 4
+paginate: 5
 paginate_path: /page:num/
 
 # Default values
