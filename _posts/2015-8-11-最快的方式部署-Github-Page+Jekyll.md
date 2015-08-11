@@ -1,5 +1,8 @@
+---
+title: 最快的方式部署-Github-Page+Jekyll
+---
 ### 论技术开放人员的设计修养
-当然，这篇小文不是 From Scratch。既然是技术博客，那怎么也得对相关技术了解。少说也要会 GitHub 的基本操作。以我来说，我又不是专职搞网页开发的，什么 JS，CSS啊，一概不懂，唯一就是 html 会基础，如果要我设计自己的网页，嗯，就是[这样](wi-cuckoo.github.io)：
+当然，这篇小文不是 From Scratch。既然是技术博客，那怎么也得对相关技术了解。少说也要会 GitHub 的基本操作。以我来说，我又不是专职搞网页开发的，什么 JS，CSS啊，一概不懂，唯一就是 html 会基础，如果要我设计自己的网页，嗯，就是[这样](http://wi-cuckoo.github.io/)：
 ![main page](http://d.pcs.baidu.com/thumbnail/72a6c056617fa323618886182244b5ee?fid=1110863153-250528-1122674633639037&time=1439294400&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-VC2jamWk6yIVZThrOs6yQDK1knc%3D&rt=sh&expires=2h&r=173167451&sharesign=unknown&size=c710_u500&quality=100)
 
 我称这是 GNU-Style，简单，专注内容（有些博客的标签比内容还多）。但为了顺应这个看脸的时代，我决定还是做一个好看一点点的，，，就是我现在这博客界面啦。
