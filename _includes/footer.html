@@ -1,15 +1,6 @@
-<footer class="row">
-      <div class="col-ms-12 text-center">
-            <hr/>
-            {% if site.footersvg == 'true' %}
-                  <div>{% include svg-icons.html %}</div>
-            {% endif %}
-            &copy; {{ site.time | date: '%Y' }} - {{site.author}}. All rights reserved<br/>
-            Built using 
-            {% if page.theme And page.theme != "" And page.theme != nil %}
-            <a class="{{page.theme}}-link" href="http://jekyllrb.com/">Jekyll</a>
-            {% else %}
-            <a href="http://jekyllrb.com/">Jekyll</a>
-            {% endif %}
-      </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; {{ site.footer }} 20{{ site.time | date: '%y' }}</p>
+        </div>
+    </footer>
