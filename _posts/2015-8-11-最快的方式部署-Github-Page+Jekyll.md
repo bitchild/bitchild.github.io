@@ -1,5 +1,5 @@
 ---
-title: 最快的方式部署-Github-Page+Jekyll
+title: 最快的方式部署 Github Page+Jekyll
 ---
 ### 论技术开放人员的设计修养
 当然，这篇小文不是 From Scratch。既然是技术博客，那怎么也得对相关技术了解。少说也要会 GitHub 的基本操作。以我来说，我又不是专职搞网页开发的，什么 JS，CSS啊，一概不懂，唯一就是 html 会基础，如果要我设计自己的网页，嗯，就是[这样](http://wi-cuckoo.github.io/)：
