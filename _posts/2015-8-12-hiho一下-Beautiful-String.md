@@ -7,17 +7,17 @@ title: hiho一下：Beautiful String
 >时间限制:10000ms<br>
 >单点时限:1000ms<br>
 >内存限制:256MB<br>
-> ####描述
->We say a string is beautiful if it has the equal amount of 3 or more continuous letters (in increasing order.)
->Here are some example of valid beautiful strings: "abc", "cde", "aabbcc", "aaabbbccc".
->Here are some example of invalid beautiful strings: "abd", "cba", "aabbc", "zab".
+>描述<br>
+>We say a string is beautiful if it has the equal amount of 3 or more continuous letters (in increasing order.)<br>
+>Here are some example of valid beautiful strings: "abc", "cde", "aabbcc", "aaabbbccc".<br>
+>Here are some example of invalid beautiful strings: "abd", "cba", "aabbc", "zab".<br>
 >Given a string of alphabets containing only lowercase alphabets (a-z), output "YES" if the string contains a 
-beautiful sub-string, otherwise output "NO".
-> ####输入
->The first line contains an integer number between 1 and 10, indicating how many test cases are followed.
+beautiful sub-string, otherwise output "NO".<br>
+> 输入<br>
+>The first line contains an integer number between 1 and 10, indicating how many test cases are followed.<br>
 >For each test case: First line is the number of letters in the string; Second line is the string. String length 
-is less than 10MB.
-> ####输出
+is less than 10MB.<br>
+> 输出<br>
 >For each test case, output a single line "YES"/"NO" to tell if the string contains a beautiful sub-string.
 
 其实网站上面的题目分析写得很好了（还有翻译），要去看的，点击[这里](http://hihocoder.com/discuss/question/2083)。
