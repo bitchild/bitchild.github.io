@@ -1,5 +1,5 @@
 ---
-title: 最快的方式部署 Github Page+Jekyll
+title: 最快的方式部署 Github Page + Jekyll
 ---
 
 ### 论技术开放人员的设计修养
