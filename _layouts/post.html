@@ -11,3 +11,32 @@ layout: default
 	</div>
 </article>
 
+  <ul class="pager" stytle="margin:0px;">
+    {% if page.next %}
+    <li style="float:left;list-style-type:none;"><a href="http://xiaoyu33.github.io{{ page.next.id }}" title="上一篇"> &larr; 上一篇</a></li>
+    {% else %}
+    <li style="float:left;list-style-type:none;">&larr; 上一篇</li>
+    {% endif %}
+    {% if page.previous %}
+    <li style="float:right;list-style-type:none;"><a href="http://xiaoyu33.github.io{{ page.previous.id }}" title="下一篇">下一篇&rarr;</a></li>
+    {% else %}
+    <li style="float:right;list-style-type:none;">下一篇&rarr;</li>
+    {% endif %}
+  </ul>
+  
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="http://xiaoyu33.github.io{{ page.id }}"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cuckoo"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
