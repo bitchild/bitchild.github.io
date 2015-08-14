@@ -3,9 +3,11 @@ title: Side Effect
 ---
 ### What's the Side Effect
 
-    Accessing a volatile object, modifying an object, modifying a file, or calling a function that does any of those
-    operations are all side effects, which are changes in the state of the execution environment.
+    Accessing a volatile object, modifying an object, modifying a file, or calling a function that 
+    does any of thoseoperations are all side effects, which are changes in the state of the execution
+    environment.
     ———— 《ISO/IEC 9899:201x》
+    
 主要的点在于那个 changes。假设你有一条表达式 int num = 0; ，那么声明变量 num 就是一个 side effect，然后将 num 赋值
 0 也是一个 side effect，因为这些都是程序执行环境声明的变化（没找到更好的表述），在这条语句执行完后，我们都知道 num 
 的值为 0 了。那么这里还有另外一个概念： Sequence Point。 
@@ -30,6 +32,7 @@ title: Side Effect
     — Immediately before and immediately after each call to a comparison function, and also between any call to a
     comparison function and any movement of the objects passed as arguments to that call (7.22.5).
     ———— 《ISO/IEC 9899:201x》
+    
 如果能全部理解最好不过了，但是平时都用不到这么牛角尖的玩意，所以我还是来举个例子好了，就之前那个——作为一个很常规的
 表达式，它的末尾就是一个 Sequence Point。又如调用 pirntf 函数结束后也有一个 Sequence Point。并且要记住，当达到一个 
 Sequence Point 时，之前的 Side Effect 都已经作用完毕了。这很好理解，还是那个给 num 赋值 0 的情况，赋值完后，就遇到了
