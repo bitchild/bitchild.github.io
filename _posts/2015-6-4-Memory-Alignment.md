@@ -67,4 +67,18 @@ Like:
 
 ### #pragma pack(n)
 
-As we mentioned above, this time we add a statement `#pragma pack(4)`. This is to change the default 
+As we mentioned above, this time we add a statement `#pragma pack(4)`. This is to change the default boundary to 4-byte boundary. C is a pretty flexible language, so that it supports we can control the boundary.
+
+So, here the question is left to be thought by our reader. If we make the change, how to explain its output ? The following is an example output of an execution.
+
+	the head address: 0x7ffe25528ec0
+	a:0x7ffe25528ec0
+	b:0x7ffe25528ec4
+	c:0x7ffe25528ecc
+	p:0x7ffe25528ed8
+
+### Conclusion
+
+Rules pertaining to alignment derive from hardware and thus differ from system to system. Some machine architectures have very stringent requirements on the alignment of data. Others are more lenient. When write portable code, programmers must be careful to avoid violating alignment requirements.
+
+> In Wuhan 337 Prison
