@@ -63,7 +63,7 @@ systems and along a 16-byte boundary on 64-bit systems. So, here, it's 16-byte. 
 
 Like:
 
-![](http://h.hiphotos.bdimg.com/album/pic/item/7aec54e736d12f2ed6aa8ae44dc2d56284356882.jpg)
+![](/img/alignment.jpg)
 
 ### #pragma pack(n)
 
