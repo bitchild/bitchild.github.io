@@ -1,6 +1,13 @@
 ---
 title: Side Effect
 ---
+
+>    
+    int a = 0;
+    a = a++;
+    
+So, what the value of **a** ?
+
 ### What's the Side Effect
 
 Accessing a volatile object, modifying an object, modifying a file, or calling a function that 
