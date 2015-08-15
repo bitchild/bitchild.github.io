@@ -58,4 +58,13 @@ First, we commented `#pragma pack(4)` statement. And the output may be the follo
 	p:0x7ffe00291890
 	
 OK, let's do some analysis. Before we start, we should know memory that is aligned along an 8-byte boundary on 32-bit
-systems and along a 16-byte boundary on 64-bit systems. So, here, it's 16-byte. In the output, we can see the address of member `a` is same as that of `struct t`. That is all the members within `struct t` are stored continuously from the head address of `t`. Then, the `a` takes 4 bytes, `b` takes 5 byte. So when stored `b`, the next address 0f memory should be **0x7ffe00291879**, if you are not sure, can display `&b[4]+1`. Now, the compiler won't place `c` from this address, because it will  exceed the 16-byte boundary.
+systems and along a 16-byte boundary on 64-bit systems. So, here, it's 16-byte. In the output, we can see the address of member `a` is same as that of `struct t`. That is all the members within `struct t` are stored continuously from the head address of `t`. Then, the `a` takes 4 bytes, `b` takes 5 byte. So when stored `b`, the next address 0f memory should be **0x7ffe00291879**, if you are not sure, can display `&b[4]+1`. Now, the compiler won't place `c` from this address, because it will  exceed the 16-byte boundary. Therefore, the output shows that the address of `c` start at 
+**0x7ffe00291880**, which differs the **a:0x7ffe00291870** 16 bytes. Likewise, the distance between address of point `p` and that of `c` is also 16 byte. If you search picures for "data alignment", you'll find lots of visual description.
+
+Like:
+
+![](http://h.hiphotos.bdimg.com/album/pic/item/7aec54e736d12f2ed6aa8ae44dc2d56284356882.jpg)
+
+### #pragma pack(n)
+
+As we mentioned above, this time we add a statement `#pragma pack(4)`. This is to change the default 
