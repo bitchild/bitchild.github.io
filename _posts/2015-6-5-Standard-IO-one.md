@@ -15,17 +15,7 @@ title: Standard I/O Learning (一)
   * `int      fputs(const char *, FILE *);`
   * `int      fprintf(FILE *, const char *, ...);`
   * `int      fscanf(FILE *, const char *, ...);`
-  
-  * `char     *gets(char *);`
-  * `int      getc(FILE *)`
-  * `int      putc(int, FILE *);`
-  * `int      putchar(int);`
-  * `int      puts(const char *);`
-  * `int      scanf(const char *, ...);`
-  * `int      printf(const char *, ...);`
-  * `int		  fflush(FILE *);`
-  * `void     rewind(FILE *);`
-  * `void     setbuf(FILE *, char *);`
+
   
 当然，我们如果仅仅讨论黑框框界面的输入输出，是没必要提那些 `f` 开头的函数的。但是在现代操作系统中，我们已经将一切设备
 当文件来对待了，在 **stdio.h** 中有如下定义：
