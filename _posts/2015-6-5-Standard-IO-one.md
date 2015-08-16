@@ -70,3 +70,8 @@ Code as following:
 Here we don't care about the out-of-boundary 0f scanf. It will be posted in detail later. As we know, scanf reads a string from stdin stream with leaving the '\n'. Then fgets reads from '\n' if we don't clean the stdin buffer. Under
  this circumstance, the second printf will just print "new line" in the next line, which means buf just stored '\n'.
 Therefore, we can use getchar to absorb the '\n', and make the stdin empty. 
+
+So far, we mainly introduced `getchar` and `fgets`. And we now know scanf won't keep '\n', but fgets will. In the Next 
+post, more funcs will be discussed.
+
+> In Wuhan 337 Prison
