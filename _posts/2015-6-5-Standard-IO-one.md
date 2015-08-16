@@ -58,6 +58,20 @@ title: Standard I/O Learning (一)
     
 当我输入 a 后，回车结束，这时候程序直接输出，根据 c2 的 ASCII 码我们知道，c2 取到了回车符 '\n'。 所以在我们回车结束后，
 stdin 的缓冲区存储了字符 a 和 '\n'，然后被两个 fgetc 分别读取了。那么这时候我们可以插入一条语句（被注释那个），然后就
-能输入两次了，但记住，程序结束后缓冲区还是存有一个回车字符 '\n'。
+能输入两次了，但记住，程序结束后缓冲区还是存有一个回车字符 '\n'。这里我们可以得到一个结论，fgetc 是以回车作为结束符的，
+并且可以处理回车符。
+
+再看另一段代码：
+
+	char s[10];
+	scanf ("%s", s); 
+	fprintf (stdout, "%s\n", s); 
+	
+	//rewind (stdin);
+	fgetc (stdin);
+	
+	char buf[5];
+	fgets (buf, 5, stdin);
+	fprintf (stdout, "%snew line", buf);
 
 > In Wuhan 337 Prison
