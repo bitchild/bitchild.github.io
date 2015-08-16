@@ -52,3 +52,21 @@ A very simple code, but we can get some info from it.
 If you run the code, you'll find it just gets over after you input a character, following Enter key. And the output shows the num of c2 is 10, which means 'LF'(Enter key). When we done the input action, the stdin stream stored a char 
 and '\n', so the c1 gets that char, and c2 gets '\n'. If we want to change to enable us input twice, we can insert another getchar(), like shown above. Here, we get a conclusion, that getchar func takes Enter key as terminal sign. And
 it can be used as taking-up '\n'.
+
+> Another Instance
+
+Code as following:
+	
+	char s[10];
+	scanf ("%s", s);
+	printf ("%s", s);
+
+	//getchar ();
+
+	char buf[20];
+	fgets (buf, 20, stdin);
+	printf ("%snew line", buf);
+
+Here we don't care about the out-of-boundary 0f scanf. It will be posted in detail later. As we know, scanf reads a string from stdin stream with leaving the '\n'. Then fgets reads from '\n' if we don't clean the stdin buffer. Under
+ this circumstance, the second printf will just print "new line" in the next line, which means buf just stored '\n'.
+Therefore, we can use getchar to absorb the '\n', and make the stdin empty. 
