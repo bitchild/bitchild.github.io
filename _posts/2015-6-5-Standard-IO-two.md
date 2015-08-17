@@ -4,7 +4,7 @@ title: Standard I/O Learning (2)
 
 > Under  normal circumstances every UNIX program has three streams opened for it when it starts up, one for input, one for output,  and one for printing diagnostic or error messages.
 
-### Scanf 访问越界
+### scanf 访问越界
 
 先来看看上一篇中那个程序代码和执行输出:
 
@@ -66,3 +66,5 @@ gdb 调试：
 就连续了，这个通过 gdb 的调试结果也能看出。 s[4] 的下一个地址就是 s2 的首地址。但这里也有个地方值得注意，就是 s.[5] 的地址和 s2 的首地址一样，但明显 s[5] 是未定义的，这里访问已经越界了，因此看来 C 在一般情况是不检查数组越界的（可以
 通过函数来完成）。
 
+继续调试， 我们输入了超出 s 数组长度的一串字符， “scanfffo“。然后 s 取到了 “scanf“，注意数组没有存储 '\0'，严格来说 s 不能称为一个字符串。然后 s2 中获得了 “ffo“，当然 s2[3] 就是 '\0'，这个不用怀疑。但从中我们看到了最大的问题，就是当 scanf 访问越界的时候，会发生占用其他内存的情况，这是相当危险的，许多底层的攻击就源于此。而且用 fprintf 输出的时候，由于
+ s 不包含 '\0'，所以会一直顺着内存访问下去，直到遇到 '\0' 结束。
