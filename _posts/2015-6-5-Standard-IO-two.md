@@ -29,4 +29,36 @@ output:
 
 代码中，我们定义了一个 4 个字节长度的 char 数组 s[4]，然后执行过程中输入了 5 个字符， “scanf“。按通常情况，我们最多
 允许输入 3 个字符，最后一个字符作为 '\0'。但从输出来看，这里 s 的打印输出完全正确。 虽然正确，但这里已经出现访问越界
-了，由于 scanf 并不检查访问越界，所以这种情况下超出数组长度的字符会去占用其他的内存地址，我们来看看 gdb 的一些调试结果。
+了，由于 scanf 并不检查访问越界，所以这种情况下超出数组长度的字符会去占用其他的内存地址，我们来修改一下代码，看看 gdb 的一些调试结果。
+
+修改后的代码：
+
+	struct string
+	{	
+		char s[5];
+		char s2[4];
+	};
+
+	struct string str;
+	scanf ("%s", str.s);
+	fprintf (stdout, "%s\n", str.s);
+
+gdb 调试：
+
+	Temporary breakpoint 1, main () at a.c:26
+	26		scanf ("%s", str.s);
+	(gdb) display &str.s[4]
+	1: &str.s[4] = 0x7fffffffdf44 "\377\177"
+	(gdb) display &str.s2
+	2: &str.s2 = (char (*)[4]) 0x7fffffffdf45
+	(gdb) display &str.s[5]
+	3: &str.s[5] = 0x7fffffffdf45 "\177"
+	(gdb) n
+	scanfffo
+	27		fprintf (stdout, "%s\n", str.s);
+	3: &str.s[5] = 0x7fffffffdf45 "ffo"
+	2: &str.s2 = (char (*)[4]) 0x7fffffffdf45
+	1: &str.s[4] = 0x7fffffffdf44 "fffo"
+	(gdb) display str.s2
+	4: str.s2 = "ffo"
+
