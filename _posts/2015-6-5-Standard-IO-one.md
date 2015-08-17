@@ -29,12 +29,10 @@ title: Standard I/O Learning (1)
 当然，我们如果仅仅讨论黑框框界面的输入输出，是没必要提那些 `f` 开头的函数的。但是在现代操作系统中，我们已经将一切设备
 当文件来对待了，在 **stdio.h** 中有如下定义：
 
-	  stderr
-	  	Standard error output stream.
-	  stdin
-	  	Standard input stream.
-	  stdout
-	  	Standard output stream.
+	extern FILE *stdin;
+	extern FILE *stdout;
+	extern FILE *stderr;
+
 	  	
 所以，这里我们完全可以用 stream  的操作函数来实现终端的读写操作，这与读写文件是一个意思，主要还是为了形成一个认识。不过那些简单的终端输入输出函数
 用起来还是很顺手的，因此我一并加入了列表，重点还是放在带 FILE 结构体参数的函数理解上。
