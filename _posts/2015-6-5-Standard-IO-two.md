@@ -82,8 +82,24 @@ gdb 调试：
 	sca
 	 addnew line
 	 
-这里我们输入了两个单词（不检查单词正确与否），"sca" and "add"。发现 `scanf` 只取了第一个空格前的单词，这是因为其
-读取是以空格为分割符的。此时，缓冲区就剩下了 " add"（注意空格），这被 `fgets` 取走，并且刚好填满数组。因此，`fgets` 
-是可以处理空格符的，如果里想读取一个句子，那么必须用 `fgets` 来读取，而且记得如果没有越界，会连同换行符 '\n' 一并取
+这里我们输入了两个单词（不检查单词正确与否），"sca" and "add"。发现 `scanf` 只取了第一个空格前的单词，这是因为其读取是以空格为分割符的。此时，缓冲区就剩下了 " add"（注意空格），这被 `fgets` 取走，并且刚好填满数组。因此，`fgets` 是可以处理空格符的，如果你想读取一个句子，那么必须用 `fgets` 来读取，而且记得如果没有越界，会连同换行符 '\n' 一并取
 走。
 
+### 其他读取函数
+
+> `fscanf`，这个函数也是不检查越界访问的，慎用。当然从一般文件 stream 中读取就问题不大，大不了读到 EOF 接结束嘛。 如果
+程序调用 `fscanf` 读取 **wint_t** 或 **wchar_t** 对象，需要包含 <wchar.h>。
+
+> `gets`，在 stdio.h 的 man 手册里对其介绍有这么一句话：
+
+	Reading a line that overflows the array pointed to by s causes undefined results. 
+	The use of fgets() is recommended.
+	
+>嗯，所以最好还是用 `fgets`，不过对于 **C Programmer** 来说，无论用哪个，都要清楚自己写的代码会发生什么情况。	
+	
+> `getc`，这个和 `fgetc` 一样，除了在被用在宏定义的情况下可能会访问 stream 多次，所以以 `getc` 作为参数的时候永远
+不能是一个 **[Side Effect](http://twobitsboy.top/side-effect)** 的表达式。
+
+在下一篇中，会简单地介绍那些输出函数，相对于输入，输出就不是很需要注意了。
+
+> In Wuhan 337 Prison
