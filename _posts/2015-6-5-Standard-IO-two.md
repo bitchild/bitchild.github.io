@@ -8,7 +8,7 @@ title: Standard I/O Learning (2)
 
 先来看看上一篇中那个程序代码和执行输出:
 
-Code:
+**Code**:
 
 	char s[4];
 	scanf ("%s", s); 
@@ -20,7 +20,7 @@ Code:
 	fgets (buf, 5, stdin);
 	fprintf (stdout, "%snew line", buf);
 
-output:
+**Output**:
 
 	scanf
 	scanf
@@ -68,3 +68,4 @@ gdb 调试：
 
 继续调试， 我们输入了超出 s 数组长度的一串字符， “scanfffo“。然后 s 取到了 “scanf“，注意数组没有存储 '\0'，严格来说 s 不能称为一个字符串。然后 s2 中获得了 “ffo“，当然 s2[3] 就是 '\0'，这个不用怀疑。但从中我们看到了最大的问题，就是当 scanf 访问越界的时候，会发生占用其他内存的情况，这是相当危险的，许多底层的攻击就源于此。而且用 fprintf 输出的时候，由于
  s 不包含 '\0'，所以会一直顺着内存访问下去，直到遇到 '\0' 结束。
+
