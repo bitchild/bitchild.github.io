@@ -13,14 +13,14 @@ layout: default
 
  <ul class="pager" stytle="margin:0px;">
     {% if page.next %}
-    <li style="float:left;list-style-type:none;"><a href="http://bitchild.github.io{{ page.next.id }}" title="上一篇"> &larr; Last Post</a></li>
+    <li style="float:left;list-style-type:none;"><a href="http://bitchild.github.io{{ page.next.id }}" title="上一篇"> &larr; Previous</a></li>
     {% else %}
-    <li style="float:left;list-style-type:none;">&larr; Last Post</li>
+    <li style="float:left;list-style-type:none;">&larr; Previous</li>
     {% endif %}
     {% if page.previous %}
-    <li style="float:right;list-style-type:none;"><a href="http://bitchild.github.io{{ page.previous.id }}" title="下一篇">Next Post&rarr;</a></li>
+    <li style="float:right;list-style-type:none;"><a href="http://bitchild.github.io{{ page.previous.id }}" title="下一篇">Next&rarr;</a></li>
     {% else %}
-    <li style="float:right;list-style-type:none;">Next Post&rarr;</li>
+    <li style="float:right;list-style-type:none;">Next&rarr;</li>
     {% endif %}
   </ul>
   
