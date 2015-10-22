@@ -1,5 +1,5 @@
 ---
-title: Docker 实战系列 —— 前言
+title: Docker 实战系列 — 前言
 ---
 
 >  This serial of Docker learning records four posts about my own way to know Docker, and using Docker.
