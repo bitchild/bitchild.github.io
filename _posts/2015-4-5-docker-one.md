@@ -1,3 +1,9 @@
+---
+title: Docker 实战系列 ———— 前言
+---
+
+>  This serial of Docker learning records four posts about my own way to know Docker, and using Docker.
+
 ## Docker是个什么鬼 ##
 
 ![docker](https://github.com/wi-cuckoo/BlogData/blob/master/images/docker.jpg?raw=true)
@@ -11,7 +17,7 @@
 如果你理解能力好的话，直接去我的[百度云盘](http://pan.baidu.com/s/1qWmgPWw)（提取码：47ng）里直接下载几份讲docker的pdf。我个人来说是十分不喜欢看视频学习的，感觉就和老师的现场直播一样，昏昏欲睡。而看文档者不一样，可以快速浏览，而且能不能接受都由自己主导。
 
 还是扯点蛋吧，docker相比VMware的优点，众所周知是轻量级。VMware的虚拟化在硬件层面，而docker则是在系统层面，然而，说这些并没有什么~~luan
-~~用。Who \*\*** cares？还能不能好好一起装逼了。大部分的人，如我，只关心docker这玩意到底好不好用，谁在乎docker是用==Golang==语言编写的，那些屌到没朋友的==名字空间==。
+~~用。Who \*\*** cares？还能不能好好一起装逼了。大部分的人，如我，只关心docker这玩意到底好不好用，谁在乎docker是用**Golang**语言编写的，那些屌到没朋友的**名字空间**。
 
 不bb了，给点链接吧，我翻译的两篇有关docker基础的文章
 
