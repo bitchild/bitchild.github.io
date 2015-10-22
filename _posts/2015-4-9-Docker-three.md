@@ -1,5 +1,5 @@
 ---
-title: Docker实战系列 —— 镜像
+title: Docker实战系列 — 镜像
 ---
 
 ### 好高端的词汇
