@@ -13,7 +13,7 @@ title: 最快的方式部署 Github Page + Jekyll
 这部分有官方指导，也有百度经验供借鉴，反正你懂的。所以这里仅把步骤列给大家看看（Linux环境）：
 
 - 注册 GitHub 帐号（一般大家都有的）
-- 建立名为 *username*.github.io 的仓库，因为是个人博客，所以不谈那个 Project 的（不必选择初始化一个主页，后面反正要改）
+- 建立名为 *username*.github.io （for example: mine is bitchild.github.io)的仓库，因为是个人博客，所以不谈那个 Project 的（不必选择初始化一个主页，后面反正要改）
 - 把仓库 clone 到本地来（前提你的本地 git 环境做好了）
 
 差不多就这几步，工作已经完成一半了，对于熟悉 GitHub 的同学来说，几秒钟的事（这也能叫事）。
