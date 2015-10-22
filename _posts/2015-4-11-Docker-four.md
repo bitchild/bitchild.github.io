@@ -1,5 +1,5 @@
 ---
-title: Docker实战系列 —— 容器
+title: Docker实战系列 — 容器
 ---
 
 ### 核心的所在 ###
